@@ -1,0 +1,179 @@
+/* ATTEMPT WITH BEM METHOD */
+/* $pacman-color: #ccc; 
+$pacwoman-color: #000; */
+
+#spaces {
+    line-height: 0;
+    display: inline-block;
+    font-size:0;
+}
+.container {
+    display: inline-block;
+    width: 100%;
+}
+.sizing {
+    margin: 2%;
+}
+.mini-left {
+    position: absolute;
+    left:96px;
+    top:96px;
+    opacity:0;
+    transition: opacity 1s linear;
+}
+.mini-right {
+    position: absolute;
+    left:156px;
+    top:96px;
+    opacity:0;
+    transition: opacity 1s linear;
+}
+.color-black{
+    background-color: black;
+    opacity:1;
+    position: relative;
+    transition: opacity .1s linear;
+}
+.color-pink{
+    background-color: pink;
+}
+.color-blue{
+    background-color: blue;
+}
+.box{
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+.box-2 {
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+.box-1 {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+.box-4{
+    width: 80px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+.box-7{
+    width: 140px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+.box-8{
+    width: 160px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+.eyeheart {
+    border: none;
+    margin:0;
+    width: 4px;
+    height: 4px;
+    background-color: red;
+    display: inline-block;
+}
+.eyewhites {
+    border: none;
+    margin:0;
+    width: 4px;
+    height: 4px;
+    color: white;
+    display:inline-block;
+}
+.spacing{
+    display: inline-block;
+}
+.spacing2 {
+    display: inline-block;   
+    margin-left: 3%;
+    opacity: 0;
+    transition: opacity .5s linear;
+    -webkit-transition: opacity .5s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity .5s ease-in; 
+}
+
+/* RAINBOW PACMAN */
+.spacing:hover .color-blue {
+    animation-timing-function: ease-in;
+    animation: gradient-animation 2s 0.5s infinite alternate;
+    -webkit-transition: gradient-animation 2s infinite alternate;
+    -moz-transition: gradient-animation 2s infinite alternate;
+    -ms-transition: gradient-animation 2s infinite alternate;
+    -o-transition: gradient-animation 2s infinite alternate;
+    transition: gradient-animation 2s infinite alternate;
+}
+
+@keyframes gradient-animation {
+    0% {background-color: #0000ff;}
+    10% {background-color: #8000ff;}
+    20% {background-color: #ff0080;} 
+    30% {background-color: #ff0000;}
+    40% {background-color: #ff8000;}
+    50% {background-color: #ffff00;}
+    60% {background-color: #80ff00;}
+    70% {background-color: #00ff00;}
+    80% {background-color: #00ff80;}
+    90% {background-color: #00ffff;}
+    100% {background-color: #0080ff;}
+}
+/* END RAINBOW PACMAN */
+
+/* PACMAN HEARTS */
+
+.spacing:hover .mini-left {
+    opacity:1;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in; 
+}
+.spacing:hover .mini-right {
+    opacity:1;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in; 
+}
+/* END PACMAN HEARTS */
+
+/* PACWOMAN APPEAR*/
+.spacing:hover ~ .spacing2 {
+  filter: alpha(opacity=50);
+  opacity: 1;
+  -webkit-animation-name: hve-scale;
+  animation-name: hve-scale;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.sizing:hover > .spacing {
+  -webkit-animation-name: hve-scale;
+  animation-name: hve-scale;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+/*END PACWOMAN*/
+
+.spacing:hover .color-black {
+    opacity:0;
+}
